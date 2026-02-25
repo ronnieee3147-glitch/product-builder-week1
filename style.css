@@ -1,1 +1,104 @@
-/* Add styles here */
+
+:root {
+    --bg-color: #f0f2f5;
+    --container-bg: #fff;
+    --text-color: #333;
+    --btn-bg: #007bff;
+    --btn-hover: #0056b3;
+    --number-bg: #4CAF50;
+    --number-text: white;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #e0e0e0;
+    --btn-bg: #3700b3;
+    --btn-hover: #6200ee;
+    --number-bg: #03dac6;
+    --number-text: #000;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+h1 {
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.numbers-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--number-bg);
+    color: var(--number-text);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#generate-btn {
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generate-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-btn {
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#theme-btn:hover {
+    background-color: var(--text-color);
+    color: var(--container-bg);
+}
