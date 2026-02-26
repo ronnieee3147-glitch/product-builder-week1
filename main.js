@@ -2,6 +2,8 @@ const generateBtn = document.getElementById('generate-btn');
 const numbersContainer = document.querySelector('.numbers-container');
 const menuResult = document.getElementById('menu-result');
 const themeBtn = document.getElementById('theme-btn');
+const imageContainer = document.getElementById('image-container');
+const menuImage = document.getElementById('menu-image');
 const body = document.body;
 
 const dinnerMenus = [
@@ -45,6 +47,14 @@ generateBtn.addEventListener('click', () => {
 
     menuResult.textContent = `오늘의 추천: ${mainRecommendation}`;
     
+    // 피자가 당첨되었을 때 이미지 표시
+    if (mainRecommendation === "피자") {
+        menuImage.src = "pexels-muffin-1653877.jpg";
+        imageContainer.classList.remove('hidden');
+    } else {
+        imageContainer.classList.add('hidden');
+    }
+
     numbersContainer.innerHTML = '';
     const otherLabel = document.createElement('div');
     otherLabel.style.marginBottom = '10px';
