@@ -1,12 +1,11 @@
-
 :root {
     --bg-color: #f0f2f5;
     --container-bg: #fff;
     --text-color: #333;
     --btn-bg: #007bff;
     --btn-hover: #0056b3;
-    --number-bg: #4CAF50;
-    --number-text: white;
+    --menu-bg: #4CAF50;
+    --menu-text: white;
 }
 
 body.dark-mode {
@@ -15,8 +14,8 @@ body.dark-mode {
     --text-color: #e0e0e0;
     --btn-bg: #3700b3;
     --btn-hover: #6200ee;
-    --number-bg: #03dac6;
-    --number-text: #000;
+    --menu-bg: #03dac6;
+    --menu-text: #000;
 }
 
 body {
@@ -38,6 +37,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    width: 90%;
+    max-width: 500px;
 }
 
 h1 {
@@ -45,39 +46,31 @@ h1 {
     margin-bottom: 30px;
 }
 
+.menu-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    color: var(--text-color);
+}
+
 .numbers-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
     margin-bottom: 30px;
 }
 
-.number-set {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.set-label {
+.menu-tag {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: var(--menu-bg);
+    color: var(--menu-text);
+    font-size: 16px;
     font-weight: bold;
-    min-width: 60px;
-    text-align: left;
-    color: var(--text-color);
-}
-
-.number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--number-bg);
-    color: var(--number-text);
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #generate-btn {
