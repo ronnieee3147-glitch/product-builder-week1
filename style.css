@@ -107,6 +107,66 @@ h1 {
     background-color: var(--btn-hover);
 }
 
+.divider {
+    border: none;
+    border-top: 1px solid var(--text-color);
+    opacity: 0.2;
+    margin: 40px 0 30px;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.dark-mode .form-group input, 
+.dark-mode .form-group textarea {
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--text-color);
+    color: var(--container-bg);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
 .theme-toggle {
     position: absolute;
     top: 20px;
